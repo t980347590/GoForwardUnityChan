@@ -5,8 +5,8 @@ using UnityEngine;
 public class CubeController : MonoBehaviour
 {
 
-    private float a = -.2f;
-    private float b = -10;
+    private float speed = -.2f;
+    private float deadLine = -10;
     // Use this for initialization
     void Start()
     {
@@ -16,8 +16,8 @@ public class CubeController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(this.a,0,0);
-        if (transform.position.x < this.b)
+        transform.Translate(this.speed,0,0);
+        if (transform.position.x < this.deadLine)
         {
             Destroy(gameObject);
         }
